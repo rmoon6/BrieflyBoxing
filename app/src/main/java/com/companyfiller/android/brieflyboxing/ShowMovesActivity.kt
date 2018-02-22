@@ -45,21 +45,15 @@ class ShowMovesActivity: AppCompatActivity(), View.OnClickListener {
     }
 
     inner class ShowMovesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
         private val moveText: TextView by lazy { itemView.findViewById<TextView>(R.id.move_text) }
-
-        fun bindView(move: Move) {
-            moveText.text = move.name
-        }
-
+        fun bindView(move: Move) { moveText.text = move.name }
     }
 
     inner class ShowMovesAdapter: RecyclerView.Adapter<ShowMovesViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ShowMovesViewHolder =
                 ShowMovesViewHolder(layoutInflater.inflate(R.layout.item_move, parent, false))
-        override fun onBindViewHolder(holder: ShowMovesViewHolder, position: Int) {
-            holder.bindView(movesList[position])
-        }
+        override fun onBindViewHolder(holder: ShowMovesViewHolder, position: Int) =
+                holder.bindView(movesList[position])
         override fun getItemCount(): Int = movesList.size
     }
 
