@@ -51,6 +51,7 @@ class ShowMovesActivity: AppCompatActivity(), View.OnClickListener {
         fun bindView(move: Move) {
             moveText.text = move.name
         }
+
     }
 
     inner class ShowMovesAdapter: RecyclerView.Adapter<ShowMovesViewHolder>() {
