@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BrieflyBoxing</string>
     <string name="get_moves_button">Get Moves</string>
+    <string name="refresh_button">Refresh</string>
 </resources>
